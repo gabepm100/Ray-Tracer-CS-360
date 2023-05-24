@@ -1,0 +1,11 @@
+testMain: TestMain.o Tuple.o 
+	g++ -o test TestMain.o Tuple.o easyppm.o
+
+TestMain.o: TestMain.cpp Tuple.h
+	g++ -c TestMain.cpp -o TestMain.o
+	
+Tuple.o: Tuple.cpp Tuple.h
+	g++ -c Tuple.cpp -o Tuple.o
+
+easyppm.o: easyppm.c easyppm.h
+	g++ -c easyppm.c -o easyppm.o

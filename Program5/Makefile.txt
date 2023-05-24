@@ -1,0 +1,35 @@
+testMain: TestMain.o Tuple.o Scene.o Tuple.o easyppm.o Ray.o Sphere.o Plane.o Object.o Lighting.o Light.o Rgb.o
+	g++ -o test TestMain.o Scene.o Tuple.o easyppm.o Ray.o Sphere.o Plane.o Object.o Lighting.o Light.o Rgb.o
+
+TestMain.o: TestMain.cpp 
+	g++ -c TestMain.cpp -o TestMain.o
+
+Scene.o: Scene.cpp Scene.h
+	g++ -c Scene.cpp -o Scene.o
+	
+Tuple.o: Tuple.cpp Tuple.h
+	g++ -c Tuple.cpp -o Tuple.o
+
+easyppm.o: easyppm.c easyppm.h
+	g++ -c easyppm.c -o easyppm.o
+
+Ray.o: Ray.cpp Ray.h
+	g++ -c Ray.cpp -o Ray.o
+
+Sphere.o: Sphere.cpp Sphere.h
+	g++ -c Sphere.cpp -o Sphere.o
+
+Plane.o: Plane.cpp Plane.h
+	g++ -c Plane.cpp -o Plane.o
+
+Object.o: Object.cpp Object.h
+	g++ -c Object.cpp -o Object.o
+
+Lighting.o: Lighting.cpp Lighting.h
+	g++ -c Lighting.cpp -o Lighting.o
+
+Light.o: Light.cpp Light.h
+	g++ -c Light.cpp -o Light.o
+
+Rgb.o: Rgb.cpp Rgb.h
+	g++ -c Rgb.cpp -o Rgb.o
